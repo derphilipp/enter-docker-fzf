@@ -7,7 +7,7 @@ before_install:
 script: |
     export GOPATH=~/go
     git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-    ~/.fzf/install
+    ~/.fzf/install -y
     curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs git.io/fisher
     fish -c "fisher fishtape .; fishtape test/*.fish"
 
